@@ -1,0 +1,24 @@
+Measurement platform: 
+
+1- Multiple laptops, smartphones, power supplies
+2- Cloud and edge servers in various geographic locations 
+3- Hadrware and software tools to collect lower-level cellular network KPI and control plane events 
+4- Availbable and custom-built "5G Killer" apps 
+5- Custom built software include: -- throughput --RTT --QoE tests 
+
+6- Synchronization and post-processing of logs from different softwares and different layers of the protocol stack 
+
+Why Edge? --> Significant boost to throughput and RTT compared to remote cloud servers 
+
+
+----------------------------------------------
+
+
+Lord Kelvin said, “when you can measure what you are
+speaking about, and express it in numbers, you know
+something about it; but when you cannot measure it,
+when you cannot express it in numbers, your knowledge
+is of a meager and unsatisfactory kind” [KELVIN].
+
+
+

@@ -1,0 +1,46 @@
+Starlink: --> Dynamic Throughput and Latency 
+	      Frequent Outage 
+	      Heavily affected by environments such as terrain, solar strom, rain, cloud, and temperature so is its power consumption 
+	      		
+	      
+Lots of simulation and theoratical work have been done 
+Just a few comprehensive studies exist with deep insight into practical performance of large scale LSNs 
+
+Systematic measurement study --> End-to-End network characteristics and performance with diverse configurations and applications 
+
+Qs: 
+1- Can today's Starlink achieve comparable performance as a typical modern terrestrial network does for end users 
+2- What are the key influential factors of the Starlink network services as perceived by end users? 
+3- Has Starlink achieved global coverage through its constellation? If not, what are the challenges? 
+
+
+Their measurement infrastructure: 
+1- 4 Dishes --> for half a year (starting from the beginning of 2022) 
+2- Scripts to automate various tools and applications to communicate to servers distributed in different regions worldwide 
+3- Servers distributed worldwide! 
+4- Field tests in Urban and Remote wild areas --> per-region collection of over 3 million total records 
+
+Starlink is currently using bent-pipe strategy 
+
+
+They did mobility and portability support test (but with simple dishes) --> They observed the throughput does not change much but they experienced frequent outages and high latency 
+
+
+Two LEO constellation network simulators: 1- Hypatia 2- StarPerf 
+
+
+Their novelty as they said: More global coverage with distand endpoints, considers video streaming, remote wild northern areas, and power consumption 
+
+At the time of their experiments there were two dishes avaiable: 1- Round-shaped Gen 1 2- Rectangular Gen 2 --> They say that the second one has better portability
+but remains bulky. 
+
+The numerical obstruction ration is visable in the "Debug Page" of the starlink app 
+
+
+They have mentioned the number of GSs located worldwide using this website informaiotn (https://starlink.sx/) which is not related to spaceX 
+
+-----------------------------------------------------
+
+Measurement Topology 
+
+
