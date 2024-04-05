@@ -38,6 +38,7 @@ Metric=800
 
 
 
+
 verizon@verizon:/etc $ cd NetworkManager/
 verizon@verizon:/etc/NetworkManager $ ls
 conf.d        dnsmasq.d         NetworkManager.conf
@@ -48,3 +49,19 @@ verizon@verizon:/etc/NetworkManager/conf.d $ ls
 verizon@verizon:/etc/NetworkManager/conf.d $ cat 10-ignore-eth0.conf 
 [keyfile]
 unmanaged-devices=interface-name:eth0
+
+[Note]
+Adding the 10-ignore-eth0.conf file under NetworkManager configs is essential to prevent eth0 to be configured by two different services, and therefore not getting assigned a proper static ipv4 by systemd-networkd. If we don't add this file, the eth0 will get assigned a ipv6 and there will appear some discrepancy in IP assignment for this interface. 
+
+
+
+---------------------------------------------
+
+
+## Hostnames: to make the communication easier we use hostnames and name resoluiton to replace the ip addresses 
+
+192.168.0.10    verizon 
+192.168.0.20    tmobile
+192.168.0.30    att
+192.168.0.40    starlink 
+192.168.0.100   scheduler 
