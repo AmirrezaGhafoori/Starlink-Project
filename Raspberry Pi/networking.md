@@ -14,3 +14,37 @@ When we try to "ping" a RPi, the ICMP echo request enters through the "eth0" int
 
 The laptop "ip route" table includes both the wired and wireless interfaces with different metric scores. So, when it receives something on the wired interface, it will send it throught the wired back first, then the wireless interface. 
 
+
+
+# How to solve it on the RPi? 
+
+We can manually add static ip and route for the eth0 interface in systemd-networkd, and also, disable any other configuration for this interface by any other network service such as "NetworkManager" 
+
+Here are the configs for one of the RPis: 
+
+
+
+verizon@verizon:/etc/systemd/network $ cat 10-eth-static.network 
+[Match]
+Name=eth0
+
+[Network]
+Address=192.168.0.10/24
+Gateway=192.168.0.1/24
+DHCP=no
+[Route]
+Gateway=192.168.0.1/24
+Metric=800
+
+
+
+verizon@verizon:/etc $ cd NetworkManager/
+verizon@verizon:/etc/NetworkManager $ ls
+conf.d        dnsmasq.d         NetworkManager.conf
+dispatcher.d  dnsmasq-shared.d  system-connections
+verizon@verizon:/etc/NetworkManager $ cd conf.d/
+verizon@verizon:/etc/NetworkManager/conf.d $ ls
+10-ignore-eth0.conf
+verizon@verizon:/etc/NetworkManager/conf.d $ cat 10-ignore-eth0.conf 
+[keyfile]
+unmanaged-devices=interface-name:eth0
