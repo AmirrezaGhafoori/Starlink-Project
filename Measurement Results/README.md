@@ -1,6 +1,8 @@
-# You can find the measurement results for RTT, and DL/UL TCP throughput tests in this folder. 
+# Measurement Results
 
-## We have four networks (ATT, T-Mobile, Verizon, Starlink) and six server locations (Virginia, California, Paris, Singapore, Sydney, Tokyo) 
+### You can find the measurement results for RTT, and DL/UL TCP throughput tests in this folder. 
+
+#### We have four networks (ATT, T-Mobile, Verizon, Starlink) and six server locations (Virginia, California, Paris, Singapore, Sydney, Tokyo) 
 
 Each .csv file contains the results for a network-server combination in three formats:
   1- "13_all" are the measurements that has been done on 13th of the month
